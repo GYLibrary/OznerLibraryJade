@@ -41,6 +41,13 @@ static OznerEasyLink *linkV1 = nil;
     [self canclepairV2];
 }
 
+
+/**
+ 发送硬件WIFI信息
+
+ @param ssid ssid description
+ @param pwd pwd description
+ */
 - (void) connectWifiWithSSID:(NSString *)ssid pwd:(NSString *)pwd {
     
     if (easyLinkConfig == nil) {
