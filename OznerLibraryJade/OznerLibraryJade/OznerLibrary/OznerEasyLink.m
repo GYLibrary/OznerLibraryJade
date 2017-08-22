@@ -201,7 +201,7 @@ static OznerEasyLink *linkV1 = nil;
                 continue;
             }
             
-            NSLog(@"搜索到新设备%@,IP:%@\n开始激活设备",macAdress,hostIp);
+            NSLog(@"搜索到新设备%@,IP:%@\n",macAdress,hostIp);
             [[ZBBonjourService sharedInstance] stopSearchDevice];
             
             dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -247,7 +247,6 @@ static OznerEasyLink *linkV1 = nil;
     
     NSLog(@"socket 连接成功");
     isActivate = false;
-    [self canclepairV1];
     [socket readDataWithTimeout:-1 tag:200];
     
     NSString  *postUrl = @"POST / HTTP/1.1\r\n\r\n{\"getvercode\":\"\"}\r\n";
@@ -264,6 +263,8 @@ static OznerEasyLink *linkV1 = nil;
     NSLog(@"激活设备成功:%@",str);
     isActivate = true;
     [socket disconnect];
+    [self canclepairV1];
+
 }
 
 
