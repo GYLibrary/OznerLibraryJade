@@ -1,0 +1,679 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		684987431F4A6C8800B4F2FE /* libEasyLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 684987361F4A6C8800B4F2FE /* libEasyLink.a */; };
+		684987441F4A6C8800B4F2FE /* NSData+IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 684987381F4A6C8800B4F2FE /* NSData+IPAddress.m */; };
+		684987451F4A6C8800B4F2FE /* NSDictionary+ZBAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6849873A1F4A6C8800B4F2FE /* NSDictionary+ZBAdd.m */; };
+		684987461F4A6C8800B4F2FE /* NSDictionary+ZBKeyMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 6849873C1F4A6C8800B4F2FE /* NSDictionary+ZBKeyMapping.m */; };
+		684987471F4A6C8800B4F2FE /* NSMutableDictionary+NilFuckOff.m in Sources */ = {isa = PBXBuildFile; fileRef = 6849873E1F4A6C8800B4F2FE /* NSMutableDictionary+NilFuckOff.m */; };
+		684987481F4A6C8800B4F2FE /* OznerBonjourDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 684987401F4A6C8800B4F2FE /* OznerBonjourDetail.m */; };
+		684987491F4A6C8800B4F2FE /* ZBBonjourService.m in Sources */ = {isa = PBXBuildFile; fileRef = 684987421F4A6C8800B4F2FE /* ZBBonjourService.m */; };
+		684987561F4A6C8D00B4F2FE /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6849874B1F4A6C8D00B4F2FE /* GCDAsyncSocket.m */; };
+		684987571F4A6C8D00B4F2FE /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6849874D1F4A6C8D00B4F2FE /* GCDAsyncUdpSocket.m */; };
+		684987581F4A6C8D00B4F2FE /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 684987501F4A6C8D00B4F2FE /* AsyncSocket.m */; };
+		684987591F4A6C8D00B4F2FE /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 684987521F4A6C8D00B4F2FE /* AsyncUdpSocket.m */; };
+		6849875C1F4A6D6500B4F2FE /* OznerEasyLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6849875B1F4A6D6500B4F2FE /* OznerEasyLink.m */; };
+		6874DC101F46C98900A7F25C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6874DC0F1F46C98900A7F25C /* main.m */; };
+		6874DC131F46C98900A7F25C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6874DC121F46C98900A7F25C /* AppDelegate.m */; };
+		6874DC161F46C98900A7F25C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6874DC151F46C98900A7F25C /* ViewController.m */; };
+		6874DC191F46C98900A7F25C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6874DC171F46C98900A7F25C /* Main.storyboard */; };
+		6874DC1B1F46C98900A7F25C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6874DC1A1F46C98900A7F25C /* Assets.xcassets */; };
+		6874DC1E1F46C98900A7F25C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6874DC1C1F46C98900A7F25C /* LaunchScreen.storyboard */; };
+		6874DC291F46C98900A7F25C /* OznerLibraryJadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6874DC281F46C98900A7F25C /* OznerLibraryJadeTests.m */; };
+		6874DC341F46C98900A7F25C /* OznerLibraryJadeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6874DC331F46C98900A7F25C /* OznerLibraryJadeUITests.m */; };
+		6874DC441F46CA3C00A7F25C /* OznerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6874DC431F46CA3C00A7F25C /* OznerManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6874DC251F46C98900A7F25C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6874DC031F46C98900A7F25C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6874DC0A1F46C98900A7F25C;
+			remoteInfo = OznerLibraryJade;
+		};
+		6874DC301F46C98900A7F25C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6874DC031F46C98900A7F25C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6874DC0A1F46C98900A7F25C;
+			remoteInfo = OznerLibraryJade;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		684987351F4A6C8800B4F2FE /* EasyLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyLink.h; sourceTree = "<group>"; };
+		684987361F4A6C8800B4F2FE /* libEasyLink.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEasyLink.a; sourceTree = "<group>"; };
+		684987371F4A6C8800B4F2FE /* NSData+IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+IPAddress.h"; sourceTree = "<group>"; };
+		684987381F4A6C8800B4F2FE /* NSData+IPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+IPAddress.m"; sourceTree = "<group>"; };
+		684987391F4A6C8800B4F2FE /* NSDictionary+ZBAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ZBAdd.h"; sourceTree = "<group>"; };
+		6849873A1F4A6C8800B4F2FE /* NSDictionary+ZBAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ZBAdd.m"; sourceTree = "<group>"; };
+		6849873B1F4A6C8800B4F2FE /* NSDictionary+ZBKeyMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ZBKeyMapping.h"; sourceTree = "<group>"; };
+		6849873C1F4A6C8800B4F2FE /* NSDictionary+ZBKeyMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ZBKeyMapping.m"; sourceTree = "<group>"; };
+		6849873D1F4A6C8800B4F2FE /* NSMutableDictionary+NilFuckOff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+NilFuckOff.h"; sourceTree = "<group>"; };
+		6849873E1F4A6C8800B4F2FE /* NSMutableDictionary+NilFuckOff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+NilFuckOff.m"; sourceTree = "<group>"; };
+		6849873F1F4A6C8800B4F2FE /* OznerBonjourDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OznerBonjourDetail.h; sourceTree = "<group>"; };
+		684987401F4A6C8800B4F2FE /* OznerBonjourDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OznerBonjourDetail.m; sourceTree = "<group>"; };
+		684987411F4A6C8800B4F2FE /* ZBBonjourService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBBonjourService.h; sourceTree = "<group>"; };
+		684987421F4A6C8800B4F2FE /* ZBBonjourService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBBonjourService.m; sourceTree = "<group>"; };
+		6849874A1F4A6C8D00B4F2FE /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		6849874B1F4A6C8D00B4F2FE /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		6849874C1F4A6C8D00B4F2FE /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		6849874D1F4A6C8D00B4F2FE /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		6849874F1F4A6C8D00B4F2FE /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		684987501F4A6C8D00B4F2FE /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		684987511F4A6C8D00B4F2FE /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		684987521F4A6C8D00B4F2FE /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		6849875A1F4A6D6500B4F2FE /* OznerEasyLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OznerEasyLink.h; sourceTree = "<group>"; };
+		6849875B1F4A6D6500B4F2FE /* OznerEasyLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OznerEasyLink.m; sourceTree = "<group>"; };
+		6874DC0B1F46C98900A7F25C /* OznerLibraryJade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OznerLibraryJade.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6874DC0F1F46C98900A7F25C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6874DC111F46C98900A7F25C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6874DC121F46C98900A7F25C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6874DC141F46C98900A7F25C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6874DC151F46C98900A7F25C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6874DC181F46C98900A7F25C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6874DC1A1F46C98900A7F25C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6874DC1D1F46C98900A7F25C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6874DC1F1F46C98900A7F25C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6874DC241F46C98900A7F25C /* OznerLibraryJadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OznerLibraryJadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6874DC281F46C98900A7F25C /* OznerLibraryJadeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OznerLibraryJadeTests.m; sourceTree = "<group>"; };
+		6874DC2A1F46C98900A7F25C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6874DC2F1F46C98900A7F25C /* OznerLibraryJadeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OznerLibraryJadeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6874DC331F46C98900A7F25C /* OznerLibraryJadeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OznerLibraryJadeUITests.m; sourceTree = "<group>"; };
+		6874DC351F46C98900A7F25C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6874DC421F46CA3C00A7F25C /* OznerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OznerManager.h; sourceTree = "<group>"; };
+		6874DC431F46CA3C00A7F25C /* OznerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OznerManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6874DC081F46C98900A7F25C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684987431F4A6C8800B4F2FE /* libEasyLink.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6874DC211F46C98900A7F25C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6874DC2C1F46C98900A7F25C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		684987341F4A6C8800B4F2FE /* EasyLink */ = {
+			isa = PBXGroup;
+			children = (
+				684987351F4A6C8800B4F2FE /* EasyLink.h */,
+				684987361F4A6C8800B4F2FE /* libEasyLink.a */,
+				684987371F4A6C8800B4F2FE /* NSData+IPAddress.h */,
+				684987381F4A6C8800B4F2FE /* NSData+IPAddress.m */,
+				684987391F4A6C8800B4F2FE /* NSDictionary+ZBAdd.h */,
+				6849873A1F4A6C8800B4F2FE /* NSDictionary+ZBAdd.m */,
+				6849873B1F4A6C8800B4F2FE /* NSDictionary+ZBKeyMapping.h */,
+				6849873C1F4A6C8800B4F2FE /* NSDictionary+ZBKeyMapping.m */,
+				6849873D1F4A6C8800B4F2FE /* NSMutableDictionary+NilFuckOff.h */,
+				6849873E1F4A6C8800B4F2FE /* NSMutableDictionary+NilFuckOff.m */,
+				6849873F1F4A6C8800B4F2FE /* OznerBonjourDetail.h */,
+				684987401F4A6C8800B4F2FE /* OznerBonjourDetail.m */,
+				684987411F4A6C8800B4F2FE /* ZBBonjourService.h */,
+				684987421F4A6C8800B4F2FE /* ZBBonjourService.m */,
+			);
+			path = EasyLink;
+			sourceTree = "<group>";
+		};
+		6849874E1F4A6C8D00B4F2FE /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				6849874A1F4A6C8D00B4F2FE /* GCDAsyncSocket.h */,
+				6849874B1F4A6C8D00B4F2FE /* GCDAsyncSocket.m */,
+				6849874C1F4A6C8D00B4F2FE /* GCDAsyncUdpSocket.h */,
+				6849874D1F4A6C8D00B4F2FE /* GCDAsyncUdpSocket.m */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		684987531F4A6C8D00B4F2FE /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				6849874F1F4A6C8D00B4F2FE /* AsyncSocket.h */,
+				684987501F4A6C8D00B4F2FE /* AsyncSocket.m */,
+				684987511F4A6C8D00B4F2FE /* AsyncUdpSocket.h */,
+				684987521F4A6C8D00B4F2FE /* AsyncUdpSocket.m */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		684987541F4A6C8D00B4F2FE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6849874E1F4A6C8D00B4F2FE /* GCD */,
+				684987531F4A6C8D00B4F2FE /* RunLoop */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		684987551F4A6C8D00B4F2FE /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				684987541F4A6C8D00B4F2FE /* Source */,
+			);
+			name = CocoaAsyncSocket;
+			path = "../../../../../workSpace/个人项目/OznerLibrarySwifty/OznerLibrarySwiftyDemo/OznerLibrarySwifty/OznerIOManager/MxChip/CocoaAsyncSocket";
+			sourceTree = "<group>";
+		};
+		6874DC021F46C98900A7F25C = {
+			isa = PBXGroup;
+			children = (
+				6874DC0D1F46C98900A7F25C /* OznerLibraryJade */,
+				6874DC271F46C98900A7F25C /* OznerLibraryJadeTests */,
+				6874DC321F46C98900A7F25C /* OznerLibraryJadeUITests */,
+				6874DC0C1F46C98900A7F25C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6874DC0C1F46C98900A7F25C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6874DC0B1F46C98900A7F25C /* OznerLibraryJade.app */,
+				6874DC241F46C98900A7F25C /* OznerLibraryJadeTests.xctest */,
+				6874DC2F1F46C98900A7F25C /* OznerLibraryJadeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6874DC0D1F46C98900A7F25C /* OznerLibraryJade */ = {
+			isa = PBXGroup;
+			children = (
+				6874DC411F46C9A600A7F25C /* OznerLibrary */,
+				6874DC111F46C98900A7F25C /* AppDelegate.h */,
+				6874DC121F46C98900A7F25C /* AppDelegate.m */,
+				6874DC141F46C98900A7F25C /* ViewController.h */,
+				6874DC151F46C98900A7F25C /* ViewController.m */,
+				6874DC171F46C98900A7F25C /* Main.storyboard */,
+				6874DC1A1F46C98900A7F25C /* Assets.xcassets */,
+				6874DC1C1F46C98900A7F25C /* LaunchScreen.storyboard */,
+				6874DC1F1F46C98900A7F25C /* Info.plist */,
+				6874DC0E1F46C98900A7F25C /* Supporting Files */,
+			);
+			path = OznerLibraryJade;
+			sourceTree = "<group>";
+		};
+		6874DC0E1F46C98900A7F25C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6874DC0F1F46C98900A7F25C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6874DC271F46C98900A7F25C /* OznerLibraryJadeTests */ = {
+			isa = PBXGroup;
+			children = (
+				6874DC281F46C98900A7F25C /* OznerLibraryJadeTests.m */,
+				6874DC2A1F46C98900A7F25C /* Info.plist */,
+			);
+			path = OznerLibraryJadeTests;
+			sourceTree = "<group>";
+		};
+		6874DC321F46C98900A7F25C /* OznerLibraryJadeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6874DC331F46C98900A7F25C /* OznerLibraryJadeUITests.m */,
+				6874DC351F46C98900A7F25C /* Info.plist */,
+			);
+			path = OznerLibraryJadeUITests;
+			sourceTree = "<group>";
+		};
+		6874DC411F46C9A600A7F25C /* OznerLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				684987551F4A6C8D00B4F2FE /* CocoaAsyncSocket */,
+				684987341F4A6C8800B4F2FE /* EasyLink */,
+				6874DC421F46CA3C00A7F25C /* OznerManager.h */,
+				6874DC431F46CA3C00A7F25C /* OznerManager.m */,
+				6849875A1F4A6D6500B4F2FE /* OznerEasyLink.h */,
+				6849875B1F4A6D6500B4F2FE /* OznerEasyLink.m */,
+			);
+			path = OznerLibrary;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6874DC0A1F46C98900A7F25C /* OznerLibraryJade */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6874DC381F46C98900A7F25C /* Build configuration list for PBXNativeTarget "OznerLibraryJade" */;
+			buildPhases = (
+				6874DC071F46C98900A7F25C /* Sources */,
+				6874DC081F46C98900A7F25C /* Frameworks */,
+				6874DC091F46C98900A7F25C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OznerLibraryJade;
+			productName = OznerLibraryJade;
+			productReference = 6874DC0B1F46C98900A7F25C /* OznerLibraryJade.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6874DC231F46C98900A7F25C /* OznerLibraryJadeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6874DC3B1F46C98900A7F25C /* Build configuration list for PBXNativeTarget "OznerLibraryJadeTests" */;
+			buildPhases = (
+				6874DC201F46C98900A7F25C /* Sources */,
+				6874DC211F46C98900A7F25C /* Frameworks */,
+				6874DC221F46C98900A7F25C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6874DC261F46C98900A7F25C /* PBXTargetDependency */,
+			);
+			name = OznerLibraryJadeTests;
+			productName = OznerLibraryJadeTests;
+			productReference = 6874DC241F46C98900A7F25C /* OznerLibraryJadeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6874DC2E1F46C98900A7F25C /* OznerLibraryJadeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6874DC3E1F46C98900A7F25C /* Build configuration list for PBXNativeTarget "OznerLibraryJadeUITests" */;
+			buildPhases = (
+				6874DC2B1F46C98900A7F25C /* Sources */,
+				6874DC2C1F46C98900A7F25C /* Frameworks */,
+				6874DC2D1F46C98900A7F25C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6874DC311F46C98900A7F25C /* PBXTargetDependency */,
+			);
+			name = OznerLibraryJadeUITests;
+			productName = OznerLibraryJadeUITests;
+			productReference = 6874DC2F1F46C98900A7F25C /* OznerLibraryJadeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6874DC031F46C98900A7F25C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = macpro;
+				TargetAttributes = {
+					6874DC0A1F46C98900A7F25C = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = UZZG6NM74T;
+						ProvisioningStyle = Automatic;
+					};
+					6874DC231F46C98900A7F25C = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = UZZG6NM74T;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6874DC0A1F46C98900A7F25C;
+					};
+					6874DC2E1F46C98900A7F25C = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = UZZG6NM74T;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6874DC0A1F46C98900A7F25C;
+					};
+				};
+			};
+			buildConfigurationList = 6874DC061F46C98900A7F25C /* Build configuration list for PBXProject "OznerLibraryJade" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6874DC021F46C98900A7F25C;
+			productRefGroup = 6874DC0C1F46C98900A7F25C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6874DC0A1F46C98900A7F25C /* OznerLibraryJade */,
+				6874DC231F46C98900A7F25C /* OznerLibraryJadeTests */,
+				6874DC2E1F46C98900A7F25C /* OznerLibraryJadeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6874DC091F46C98900A7F25C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6874DC1E1F46C98900A7F25C /* LaunchScreen.storyboard in Resources */,
+				6874DC1B1F46C98900A7F25C /* Assets.xcassets in Resources */,
+				6874DC191F46C98900A7F25C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6874DC221F46C98900A7F25C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6874DC2D1F46C98900A7F25C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6874DC071F46C98900A7F25C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				684987461F4A6C8800B4F2FE /* NSDictionary+ZBKeyMapping.m in Sources */,
+				684987581F4A6C8D00B4F2FE /* AsyncSocket.m in Sources */,
+				6874DC161F46C98900A7F25C /* ViewController.m in Sources */,
+				684987441F4A6C8800B4F2FE /* NSData+IPAddress.m in Sources */,
+				6874DC131F46C98900A7F25C /* AppDelegate.m in Sources */,
+				684987571F4A6C8D00B4F2FE /* GCDAsyncUdpSocket.m in Sources */,
+				684987471F4A6C8800B4F2FE /* NSMutableDictionary+NilFuckOff.m in Sources */,
+				6874DC441F46CA3C00A7F25C /* OznerManager.m in Sources */,
+				684987481F4A6C8800B4F2FE /* OznerBonjourDetail.m in Sources */,
+				684987451F4A6C8800B4F2FE /* NSDictionary+ZBAdd.m in Sources */,
+				6874DC101F46C98900A7F25C /* main.m in Sources */,
+				684987561F4A6C8D00B4F2FE /* GCDAsyncSocket.m in Sources */,
+				6849875C1F4A6D6500B4F2FE /* OznerEasyLink.m in Sources */,
+				684987491F4A6C8800B4F2FE /* ZBBonjourService.m in Sources */,
+				684987591F4A6C8D00B4F2FE /* AsyncUdpSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6874DC201F46C98900A7F25C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6874DC291F46C98900A7F25C /* OznerLibraryJadeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6874DC2B1F46C98900A7F25C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6874DC341F46C98900A7F25C /* OznerLibraryJadeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6874DC261F46C98900A7F25C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6874DC0A1F46C98900A7F25C /* OznerLibraryJade */;
+			targetProxy = 6874DC251F46C98900A7F25C /* PBXContainerItemProxy */;
+		};
+		6874DC311F46C98900A7F25C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6874DC0A1F46C98900A7F25C /* OznerLibraryJade */;
+			targetProxy = 6874DC301F46C98900A7F25C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6874DC171F46C98900A7F25C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6874DC181F46C98900A7F25C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6874DC1C1F46C98900A7F25C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6874DC1D1F46C98900A7F25C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6874DC361F46C98900A7F25C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6874DC371F46C98900A7F25C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6874DC391F46C98900A7F25C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UZZG6NM74T;
+				INFOPLIST_FILE = OznerLibraryJade/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OznerLibraryJade/OznerLibrary/EasyLink",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Giant.OznerLibraryJade;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6874DC3A1F46C98900A7F25C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UZZG6NM74T;
+				INFOPLIST_FILE = OznerLibraryJade/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OznerLibraryJade/OznerLibrary/EasyLink",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Giant.OznerLibraryJade;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6874DC3C1F46C98900A7F25C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = UZZG6NM74T;
+				INFOPLIST_FILE = OznerLibraryJadeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Giant.OznerLibraryJadeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OznerLibraryJade.app/OznerLibraryJade";
+			};
+			name = Debug;
+		};
+		6874DC3D1F46C98900A7F25C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = UZZG6NM74T;
+				INFOPLIST_FILE = OznerLibraryJadeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Giant.OznerLibraryJadeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OznerLibraryJade.app/OznerLibraryJade";
+			};
+			name = Release;
+		};
+		6874DC3F1F46C98900A7F25C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = UZZG6NM74T;
+				INFOPLIST_FILE = OznerLibraryJadeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Giant.OznerLibraryJadeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OznerLibraryJade;
+			};
+			name = Debug;
+		};
+		6874DC401F46C98900A7F25C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = UZZG6NM74T;
+				INFOPLIST_FILE = OznerLibraryJadeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Giant.OznerLibraryJadeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OznerLibraryJade;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6874DC061F46C98900A7F25C /* Build configuration list for PBXProject "OznerLibraryJade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6874DC361F46C98900A7F25C /* Debug */,
+				6874DC371F46C98900A7F25C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6874DC381F46C98900A7F25C /* Build configuration list for PBXNativeTarget "OznerLibraryJade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6874DC391F46C98900A7F25C /* Debug */,
+				6874DC3A1F46C98900A7F25C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6874DC3B1F46C98900A7F25C /* Build configuration list for PBXNativeTarget "OznerLibraryJadeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6874DC3C1F46C98900A7F25C /* Debug */,
+				6874DC3D1F46C98900A7F25C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6874DC3E1F46C98900A7F25C /* Build configuration list for PBXNativeTarget "OznerLibraryJadeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6874DC3F1F46C98900A7F25C /* Debug */,
+				6874DC401F46C98900A7F25C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6874DC031F46C98900A7F25C /* Project object */;
+}
