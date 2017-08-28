@@ -17,6 +17,7 @@
 #import "OznerBonjourDetail.h"
 #import "ZBBonjourService.h"
 #import "GCDAsyncSocket.h"
+
 static OznerEasyLink *linkV1 = nil;
 
 @interface OznerEasyLink() <EasyLinkFTCDelegate,ZBBonjourServiceDelegate,GCDAsyncSocketDelegate>

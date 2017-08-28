@@ -28,7 +28,8 @@
 		6874DC291F46C98900A7F25C /* OznerLibraryJadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6874DC281F46C98900A7F25C /* OznerLibraryJadeTests.m */; };
 		6874DC341F46C98900A7F25C /* OznerLibraryJadeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6874DC331F46C98900A7F25C /* OznerLibraryJadeUITests.m */; };
 		6874DC441F46CA3C00A7F25C /* OznerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6874DC431F46CA3C00A7F25C /* OznerManager.m */; };
-		68CE5C9C1F4FF38E00F70702 /* OznerPairConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CE5C9B1F4FF38E00F70702 /* OznerPairConfig.m */; };
+		687D77651F53B85C00BEBCBA /* OznerDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 687D77641F53B85C00BEBCBA /* OznerDeviceInfo.m */; };
+		687D77681F53BB4300BEBCBA /* OznerDeviceInfoOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 687D77671F53BB4300BEBCBA /* OznerDeviceInfoOC.m */; };
 		68CE5CA21F50008200F70702 /* OznerBaseDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CE5CA11F50008200F70702 /* OznerBaseDevice.m */; };
 		68DF705D1F4C0B2400F09FE8 /* OznerWiFiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DF705C1F4C0B2400F09FE8 /* OznerWiFiManager.m */; };
 /* End PBXBuildFile section */
@@ -93,8 +94,10 @@
 		6874DC351F46C98900A7F25C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6874DC421F46CA3C00A7F25C /* OznerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OznerManager.h; sourceTree = "<group>"; };
 		6874DC431F46CA3C00A7F25C /* OznerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OznerManager.m; sourceTree = "<group>"; };
-		68CE5C9A1F4FF38E00F70702 /* OznerPairConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OznerPairConfig.h; sourceTree = "<group>"; };
-		68CE5C9B1F4FF38E00F70702 /* OznerPairConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OznerPairConfig.m; sourceTree = "<group>"; };
+		687D77631F53B85C00BEBCBA /* OznerDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OznerDeviceInfo.h; sourceTree = "<group>"; };
+		687D77641F53B85C00BEBCBA /* OznerDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OznerDeviceInfo.m; sourceTree = "<group>"; };
+		687D77661F53BB4300BEBCBA /* OznerDeviceInfoOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OznerDeviceInfoOC.h; sourceTree = "<group>"; };
+		687D77671F53BB4300BEBCBA /* OznerDeviceInfoOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OznerDeviceInfoOC.m; sourceTree = "<group>"; };
 		68CE5CA01F50008200F70702 /* OznerBaseDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OznerBaseDevice.h; sourceTree = "<group>"; };
 		68CE5CA11F50008200F70702 /* OznerBaseDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OznerBaseDevice.m; sourceTree = "<group>"; };
 		68DF705B1F4C0B2400F09FE8 /* OznerWiFiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OznerWiFiManager.h; sourceTree = "<group>"; };
@@ -272,8 +275,10 @@
 		68CE5C991F4FF37A00F70702 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				68CE5C9A1F4FF38E00F70702 /* OznerPairConfig.h */,
-				68CE5C9B1F4FF38E00F70702 /* OznerPairConfig.m */,
+				687D77661F53BB4300BEBCBA /* OznerDeviceInfoOC.h */,
+				687D77671F53BB4300BEBCBA /* OznerDeviceInfoOC.m */,
+				687D77631F53B85C00BEBCBA /* OznerDeviceInfo.h */,
+				687D77641F53B85C00BEBCBA /* OznerDeviceInfo.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -428,9 +433,10 @@
 				684987451F4A6C8800B4F2FE /* NSDictionary+ZBAdd.m in Sources */,
 				6874DC101F46C98900A7F25C /* main.m in Sources */,
 				684987561F4A6C8D00B4F2FE /* GCDAsyncSocket.m in Sources */,
-				68CE5C9C1F4FF38E00F70702 /* OznerPairConfig.m in Sources */,
+				687D77681F53BB4300BEBCBA /* OznerDeviceInfoOC.m in Sources */,
 				6849875C1F4A6D6500B4F2FE /* OznerEasyLink.m in Sources */,
 				684987491F4A6C8800B4F2FE /* ZBBonjourService.m in Sources */,
+				687D77651F53B85C00BEBCBA /* OznerDeviceInfo.m in Sources */,
 				684987591F4A6C8D00B4F2FE /* AsyncUdpSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,6 +15,18 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol OznerPairDelegate <NSObject>
+
+@optional
+
+- (void)devicePairSuccess;
+
+- (void)devicePairFailurWithError:(NSError *)error;
+
+
+@end
+
+
 typedef enum : NSUInteger {
     VersionOne,
     VersionTwo,
@@ -22,6 +34,8 @@ typedef enum : NSUInteger {
 } OznerWifiVersion;
 
 @interface OznerWiFiManager : NSObject
+
+@property (weak,nonatomic) id<OznerPairDelegate> delegate;
 
 - (instancetype)sharedInstance;
 
@@ -33,8 +47,7 @@ typedef enum : NSUInteger {
  @param pwd pwd description
  @param version 配网版本
  */
-- (void)starPairWithSSID:(NSString *)ssid pwd:(NSString *)pwd version:(OznerWifiVersion)version;
-
+- (void)starPairWithSSID:(NSString *)ssid pwd:(NSString *)pwd delegate:(id <OznerPairDelegate>)delegate version:(OznerWifiVersion)version;
 
 /**
  cancle pair

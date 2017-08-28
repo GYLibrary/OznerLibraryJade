@@ -43,7 +43,7 @@
 
 #pragma mark - start or cancle pair
 
-- (void)starPairWithSSID:(NSString *)ssid pwd:(NSString *)pwd version:(OznerWifiVersion)version
+- (void)starPairWithSSID:(NSString *)ssid pwd:(NSString *)pwd delegate:(id <OznerPairDelegate>)delegate version:(OznerWifiVersion)version
 {
     
     switch (version) {
