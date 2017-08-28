@@ -14,12 +14,12 @@
 //  Real developers ship.
 
 #import <Foundation/Foundation.h>
-
+#import "OznerDeviceInfo.h"
 @protocol OznerPairDelegate <NSObject>
 
 @optional
 
-- (void)devicePairSuccess;
+- (void)devicePairSuccessWithDeviceInfo:(OznerDeviceInfo *)info;
 
 - (void)devicePairFailurWithError:(NSError *)error;
 

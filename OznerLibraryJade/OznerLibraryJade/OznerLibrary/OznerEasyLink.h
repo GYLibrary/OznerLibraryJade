@@ -15,6 +15,10 @@
 
 #import <Foundation/Foundation.h>
 #import "EasyLink.h"
+#import "OznerDeviceInfo.h"
+
+typedef void(^SuccessBlock)(OznerDeviceInfo *);
+typedef void(^FailedBlock)(NSError *);
 
 @interface OznerEasyLink : NSObject
 
@@ -33,7 +37,7 @@
  @param pwd 密码
  @param timeout 超时时间
  */
-- (void)starPairWithSSID:(NSString *)ssid pwd:(NSString *)pwd timeOut:(int)timeout;
+- (void)starPairWithSSID:(NSString *)ssid pwd:(NSString *)pwd success:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock timeOut:(int)timeout;
 
 /**
  取消Version_1配网
@@ -49,7 +53,7 @@
  @param pwd 密码
  @param timeout 超时时间
  */
-- (void)starPairV2WithSSID:(NSString *)ssid pwd:(NSString *)pwd timeOut:(int)timeout;
+- (void)starPairV2WithSSID:(NSString *)ssid pwd:(NSString *)pwd success:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock timeOut:(int)timeout;
 
 /**
  取消Version_1配网

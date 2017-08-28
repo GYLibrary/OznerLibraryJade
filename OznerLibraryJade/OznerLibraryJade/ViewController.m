@@ -28,9 +28,9 @@
 
 - (IBAction)startPair:(id)sender {
     
-    [[OznerEasyLink sharedInstance] starPairWithSSID:self.wiftName.text pwd:self.pwd.text timeOut:120];
+//    [[OznerEasyLink sharedInstance] starPairWithSSID:self.wiftName.text pwd:self.pwd.text timeOut:120];
     
-    [[OznerEasyLink sharedInstance] starPairV2WithSSID:self.wiftName.text pwd:self.pwd.text timeOut:120];
+//    [[OznerEasyLink sharedInstance] starPairV2WithSSID:self.wiftName.text pwd:self.pwd.text timeOut:120];
 }
 
 - (void)didReceiveMemoryWarning {

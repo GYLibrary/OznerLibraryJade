@@ -46,19 +46,77 @@
 - (void)starPairWithSSID:(NSString *)ssid pwd:(NSString *)pwd delegate:(id <OznerPairDelegate>)delegate version:(OznerWifiVersion)version
 {
     
-    switch (version) {
-        case VersionOne:
-            [[OznerEasyLink sharedInstance] starPairWithSSID:ssid pwd:pwd timeOut:120];
-            break;
-        case VersionTwo:
-            [[OznerEasyLink sharedInstance] starPairV2WithSSID:ssid pwd:pwd timeOut:120];
-            break;
-        case AllVersion:
-            [[OznerEasyLink sharedInstance] starPairWithSSID:ssid pwd:pwd timeOut:120];
-            [[OznerEasyLink sharedInstance] starPairV2WithSSID:ssid pwd:pwd timeOut:120];
-            break;
-        default:
-            break;
+    
+    __block typeof(self)  __weakSelf = self;
+    
+    if (version == VersionOne) {
+        
+        [[OznerEasyLink sharedInstance] starPairWithSSID:ssid pwd:pwd success:^(OznerDeviceInfo *info) {
+            
+            [__weakSelf blockSuccesActionWithDelegate:delegate deviceInfo:info];
+            
+        } failure:^(NSError *error) {
+            
+            [__weakSelf blockFaliureActionWithDelegate:delegate error:error];
+            
+        } timeOut:120];
+    } else if (version == VersionTwo) {
+        
+        [[OznerEasyLink sharedInstance] starPairV2WithSSID:ssid pwd:pwd success:^(OznerDeviceInfo *info) {
+            
+            [__weakSelf blockSuccesActionWithDelegate:delegate deviceInfo:info];
+            
+        } failure:^(NSError *error) {
+            
+            [__weakSelf blockFaliureActionWithDelegate:delegate error:error];
+
+            
+        } timeOut:120];
+        
+    } else {
+        
+        [[OznerEasyLink sharedInstance] starPairWithSSID:ssid pwd:pwd success:^(OznerDeviceInfo *info) {
+            
+            [__weakSelf blockSuccesActionWithDelegate:delegate deviceInfo:info];
+
+            
+        } failure:^(NSError *error) {
+            
+            [__weakSelf blockFaliureActionWithDelegate:delegate error:error];
+            
+        } timeOut:120];
+        
+        [[OznerEasyLink sharedInstance] starPairV2WithSSID:ssid pwd:pwd success:^(OznerDeviceInfo *info) {
+            
+            [__weakSelf blockSuccesActionWithDelegate:delegate deviceInfo:info];
+
+            
+        } failure:^(NSError *error) {
+            
+             [__weakSelf blockFaliureActionWithDelegate:delegate error:error];
+            
+        } timeOut:120];
+        
+    }
+
+}
+
+- (void)blockSuccesActionWithDelegate:(id<OznerPairDelegate>)delegate deviceInfo:(OznerDeviceInfo*)info {
+    
+    if ([delegate respondsToSelector:@selector(devicePairSuccessWithDeviceInfo:)]) {
+        
+        [delegate devicePairSuccessWithDeviceInfo:info];
+        
+    }
+    
+}
+
+- (void)blockFaliureActionWithDelegate:(id<OznerPairDelegate>)delegate error:(NSError*)error {
+
+    if ([delegate respondsToSelector:@selector(devicePairFailurWithError:)]) {
+        
+        [delegate devicePairFailurWithError:error];
+        
     }
     
 }
