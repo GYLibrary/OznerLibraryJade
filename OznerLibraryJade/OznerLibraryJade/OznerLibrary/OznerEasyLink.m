@@ -17,6 +17,7 @@
 #import "OznerBonjourDetail.h"
 #import "ZBBonjourService.h"
 #import "GCDAsyncSocket.h"
+#import "OznerDeviceInfo.h"
 
 static OznerEasyLink *linkV1 = nil;
 
@@ -31,7 +32,14 @@ static OznerEasyLink *linkV1 = nil;
     GCDAsyncSocket *socket;
     BOOL isActivate;
     NSString *hostIp;
-
+    OznerDeviceInfo *deviceInfo;
+    
+    SuccessBlock successBlockV1;
+    FailedBlock failBlockV1;
+    
+    SuccessBlock successBlockV2;
+    FailedBlock failBlockV2;
+    
 }
 
 #pragma mark All
@@ -70,7 +78,10 @@ static OznerEasyLink *linkV1 = nil;
 }
 
 #pragma mark 1.O配网相关
-- (void)starPairWithSSID:(NSString *)ssid pwd:(NSString *)pwd timeOut:(int)timeout {
+- (void)starPairWithSSID:(NSString *)ssid pwd:(NSString *)pwd success:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock timeOut:(int)timeout {
+    
+    self->successBlockV1 = successBlock;
+    self->failBlockV1 = failedBlock;
     
     [self connectWifiWithSSID:ssid pwd:pwd];
     
@@ -98,14 +109,16 @@ static OznerEasyLink *linkV1 = nil;
 
 - (void)pairSuccessedV1WithConfigDic:(NSDictionary *)configDic {
     
-    [self cancleAll];
     [easyLinkConfig unInit];
     easyLinkConfig = nil;
     bonJourDetail = nil;
-    
+    deviceInfo.version = 1;
+
     NSString *ip = [[[configDic valueForKey:@"C"][1] valueForKey:@"C"][3] valueForKey:@"C"];
 //    __weak typeof(self) weakSelf = self;
     sleep(3);
+    
+    __block typeof(self) weakSelf = self;
     bonJourDetail = [[OznerBonjourDetail alloc] init:ip block:^(NSString *deviceID) {
         
         if ([deviceID containsString:@"/"]) {
@@ -120,8 +133,13 @@ static OznerEasyLink *linkV1 = nil;
                 NSString *tempStr = [str substringFromIndex:i*2];
                 [identifier appendString:@":"];
                 [identifier appendString:[tempStr substringToIndex:2]];
-                NSLog(@"1.0激活成功,配网成功,deviceID:%@,productID:%@",identifier,deviceInfoArr[0]);
             }
+            NSLog(@"1.0激活成功,配网成功,deviceID:%@,productID:%@",identifier,deviceInfoArr[0]);
+            weakSelf->deviceInfo.deviceID = identifier;
+            weakSelf->deviceInfo.devicMac = identifier;
+            weakSelf->deviceInfo.production = deviceInfoArr[0];
+            
+            [weakSelf pairSuccess];
         }
         
     }];
@@ -168,7 +186,10 @@ static OznerEasyLink *linkV1 = nil;
 
 #pragma mark 2.0配网相关信息
 
-- (void)starPairV2WithSSID:(NSString *)ssid pwd:(NSString *)pwd timeOut:(int)timeout {
+- (void)starPairV2WithSSID:(NSString *)ssid pwd:(NSString *)pwd success:(SuccessBlock)successBlock failure:(FailedBlock)failedBlock timeOut:(int)timeout {
+    
+    self->successBlockV2 = successBlock;
+    self->failBlockV2 = failedBlock;
     
     [self connectWifiWithSSID:ssid pwd:pwd];
     
@@ -205,8 +226,12 @@ static OznerEasyLink *linkV1 = nil;
             NSLog(@"搜索到新设备%@,IP:%@\n",macAdress,hostIp);
             [[ZBBonjourService sharedInstance] stopSearchDevice];
             
+            deviceInfo.version = 2;
+            deviceInfo.production = [item valueForKey:@"RecordData"][@"FogProductId"];
+            
             dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
             socket = [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:queue];
+            
             
             NSError *error = nil;
             
@@ -214,6 +239,7 @@ static OznerEasyLink *linkV1 = nil;
                 [socket connectToHost:hostIp onPort:8002 error:&error];
             } @catch (NSException *exception) {
                 NSLog(@"激活失败：%@",error);
+                
             } @finally {
                 break;
             }
@@ -238,6 +264,7 @@ static OznerEasyLink *linkV1 = nil;
             [socket connectToHost:hostIp onPort:8002 error:&error];
         } @catch (NSException *exception) {
             NSLog(@"激活失败：%@",error);
+            [self pairFailured];
         } @finally {
             NSLog(@"");
         }
@@ -264,12 +291,32 @@ static OznerEasyLink *linkV1 = nil;
     NSLog(@"激活设备成功:%@",str);
     isActivate = true;
     [socket disconnect];
-    [self canclepairV1];
-
+    [self pairSuccess];
 }
 
+#pragma mark 配网结果
 
+- (void)pairSuccess {
+    
+    [self cancleAll];
+    
+    if (deviceInfo.version == 1) {
+        successBlockV1(self->deviceInfo);
+        return;
+    }
+    
+    successBlockV2(self->deviceInfo);
+}
 
+- (void)pairFailured {
+    [self cancleAll];
+    if (deviceInfo.version == 1) {
+        failBlockV1([NSError errorWithDomain:@"配网失败" code:-6666 userInfo:nil]);
+        return;
+    }
+
+    failBlockV2([NSError errorWithDomain:@"配网失败" code:-6666 userInfo:nil]);
+}
 #pragma mark 单利设置
 
 +  (instancetype)sharedInstance {
@@ -280,6 +327,7 @@ static OznerEasyLink *linkV1 = nil;
         
         if (linkV1 == nil) {
             linkV1 = [[OznerEasyLink alloc] init];
+            
         }
     });
     
@@ -292,6 +340,7 @@ static OznerEasyLink *linkV1 = nil;
     if (self) {
         if (easyLinkConfig == nil) {
             easyLinkConfig = [[EASYLINK alloc]initWithDelegate:self];
+            deviceInfo = [[OznerDeviceInfo alloc] init];
         }
     }
     return self;

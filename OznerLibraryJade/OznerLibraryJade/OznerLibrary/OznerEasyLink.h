@@ -22,6 +22,8 @@ typedef void(^FailedBlock)(NSError *);
 
 @interface OznerEasyLink : NSObject
 
+
+
 + (instancetype)sharedInstance;
 
 #pragma mark All

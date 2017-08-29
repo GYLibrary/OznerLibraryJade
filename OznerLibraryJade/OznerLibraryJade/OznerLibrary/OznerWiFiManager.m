@@ -49,55 +49,75 @@
     
     __block typeof(self)  __weakSelf = self;
     
-    if (version == VersionOne) {
-        
-        [[OznerEasyLink sharedInstance] starPairWithSSID:ssid pwd:pwd success:^(OznerDeviceInfo *info) {
+    switch (version) {
+        case VersionOne:
+        {
             
-            [__weakSelf blockSuccesActionWithDelegate:delegate deviceInfo:info];
+//            [[OznerEasyLink sharedInstance] starPairWithSSID:ssid pwd:pwd timeOut:120];
+            [[OznerEasyLink sharedInstance] starPairWithSSID:ssid pwd:pwd success:^(OznerDeviceInfo *info) {
+                
+                [__weakSelf blockSuccesActionWithDelegate:delegate deviceInfo:info];
+                
+                
+            } failure:^(NSError *error) {
+                
+                [__weakSelf blockFaliureActionWithDelegate:delegate error:error];
+                
+            } timeOut:120];
             
-        } failure:^(NSError *error) {
+        }
+            break;
+        case VersionTwo:
+        {
+            [[OznerEasyLink sharedInstance] starPairV2WithSSID:ssid pwd:pwd success:^(OznerDeviceInfo *info) {
+                
+                [__weakSelf blockSuccesActionWithDelegate:delegate deviceInfo:info];
+                
+            } failure:^(NSError *error) {
+                
+                [__weakSelf blockFaliureActionWithDelegate:delegate error:error];
+                
+                
+            } timeOut:120];
+//            [[OznerEasyLink sharedInstance] starPairV2WithSSID:ssid pwd:pwd timeOut:120];
+        }
+            break;
+        case AllVersion:
+        {
             
-            [__weakSelf blockFaliureActionWithDelegate:delegate error:error];
+            [[OznerEasyLink sharedInstance] starPairWithSSID:ssid pwd:pwd success:^(OznerDeviceInfo *info) {
+                
+                [__weakSelf blockSuccesActionWithDelegate:delegate deviceInfo:info];
+                
+                
+            } failure:^(NSError *error) {
+                
+                [__weakSelf blockFaliureActionWithDelegate:delegate error:error];
+                
+            } timeOut:120];
             
-        } timeOut:120];
-    } else if (version == VersionTwo) {
-        
-        [[OznerEasyLink sharedInstance] starPairV2WithSSID:ssid pwd:pwd success:^(OznerDeviceInfo *info) {
+            [[OznerEasyLink sharedInstance] starPairV2WithSSID:ssid pwd:pwd success:^(OznerDeviceInfo *info) {
+                
+                [__weakSelf blockSuccesActionWithDelegate:delegate deviceInfo:info];
+                
+                
+            } failure:^(NSError *error) {
+                
+                [__weakSelf blockFaliureActionWithDelegate:delegate error:error];
+                
+            } timeOut:120];
             
-            [__weakSelf blockSuccesActionWithDelegate:delegate deviceInfo:info];
-            
-        } failure:^(NSError *error) {
-            
-            [__weakSelf blockFaliureActionWithDelegate:delegate error:error];
+//            [[OznerEasyLink sharedInstance] starPairWithSSID:ssid pwd:pwd timeOut:120];
+//            [[OznerEasyLink sharedInstance] starPairV2WithSSID:ssid pwd:pwd timeOut:120];
 
+        }
+            break;
+        default:
             
-        } timeOut:120];
-        
-    } else {
-        
-        [[OznerEasyLink sharedInstance] starPairWithSSID:ssid pwd:pwd success:^(OznerDeviceInfo *info) {
-            
-            [__weakSelf blockSuccesActionWithDelegate:delegate deviceInfo:info];
-
-            
-        } failure:^(NSError *error) {
-            
-            [__weakSelf blockFaliureActionWithDelegate:delegate error:error];
-            
-        } timeOut:120];
-        
-        [[OznerEasyLink sharedInstance] starPairV2WithSSID:ssid pwd:pwd success:^(OznerDeviceInfo *info) {
-            
-            [__weakSelf blockSuccesActionWithDelegate:delegate deviceInfo:info];
-
-            
-        } failure:^(NSError *error) {
-            
-             [__weakSelf blockFaliureActionWithDelegate:delegate error:error];
-            
-        } timeOut:120];
-        
+            break;
     }
+    
+    
 
 }
 
