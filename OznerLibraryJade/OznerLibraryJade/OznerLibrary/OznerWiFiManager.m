@@ -18,7 +18,7 @@
 
 @implementation OznerWiFiManager
 
-- (instancetype)sharedInstance
++ (instancetype)sharedInstance
 {
     
     static OznerWiFiManager *manager = nil;
@@ -45,7 +45,6 @@
 
 - (void)starPairWithSSID:(NSString *)ssid pwd:(NSString *)pwd delegate:(id <OznerPairDelegate>)delegate version:(OznerWifiVersion)version
 {
-    
     
     __block typeof(self)  __weakSelf = self;
     

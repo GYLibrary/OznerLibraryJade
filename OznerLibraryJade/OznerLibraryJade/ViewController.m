@@ -8,8 +8,8 @@
 
 #import "ViewController.h"
 #import "OznerEasyLink.h"
-
-@interface ViewController ()
+#import "OznerWiFiManager.h"
+@interface ViewController () <OznerPairDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *wiftName;
 @property (weak, nonatomic) IBOutlet UITextField *pwd;
@@ -21,21 +21,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.wiftName.text = @"ITDEV";
-    self.pwd.text = @"87654321";
+    self.wiftName.text = @"zach_phone";
+    self.pwd.text = @"zhuguangyang1";
     
 }
 
 - (IBAction)startPair:(id)sender {
     
-//    [[OznerEasyLink sharedInstance] starPairWithSSID:self.wiftName.text pwd:self.pwd.text timeOut:120];
+    [[OznerWiFiManager sharedInstance] starPairWithSSID:self.wiftName.text pwd:self.pwd.text delegate:self version:VersionTwo];
     
-//    [[OznerEasyLink sharedInstance] starPairV2WithSSID:self.wiftName.text pwd:self.pwd.text timeOut:120];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)devicePairSuccessWithDeviceInfo:(OznerDeviceInfo *)info
+{
+    NSLog(@"%@",info);
+}
+
+- (void)devicePairFailurWithError:(NSError *)error
+{
+    NSLog(@"%@",error);
 }
 
 

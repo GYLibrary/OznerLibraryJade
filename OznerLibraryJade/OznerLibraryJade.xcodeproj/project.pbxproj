@@ -257,6 +257,7 @@
 		6874DC411F46C9A600A7F25C /* OznerLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				68CB63421F8CB4A5004164C9 /* GYBlueTooth */,
 				68CE5C991F4FF37A00F70702 /* Config */,
 				684987551F4A6C8D00B4F2FE /* CocoaAsyncSocket */,
 				684987341F4A6C8800B4F2FE /* EasyLink */,
@@ -270,6 +271,13 @@
 				68CE5CA11F50008200F70702 /* OznerBaseDevice.m */,
 			);
 			path = OznerLibrary;
+			sourceTree = "<group>";
+		};
+		68CB63421F8CB4A5004164C9 /* GYBlueTooth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GYBlueTooth;
 			sourceTree = "<group>";
 		};
 		68CE5C991F4FF37A00F70702 /* Config */ = {

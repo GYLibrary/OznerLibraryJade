@@ -140,6 +140,10 @@ static OznerEasyLink *linkV1 = nil;
             weakSelf->deviceInfo.production = deviceInfoArr[0];
             
             [weakSelf pairSuccess];
+        } else {
+            
+            [weakSelf pairSuccess];
+            
         }
         
     }];
@@ -173,10 +177,10 @@ static OznerEasyLink *linkV1 = nil;
     
     if (mataDataDict[@"FW"]) {
         
-        NSMutableString *productID =[NSMutableString stringWithFormat:@"%@", @"16a21bd6"];
-        if ([mataDataDict[@"FW"] containsString:@"FOG_HAOZE_AIR"]) {
-            productID = [NSMutableString stringWithFormat:@"%@", @"580c2783"];
-        }
+//        NSMutableString *productID =[NSMutableString stringWithFormat:@"%@", @"16a21bd6"];
+//        if ([mataDataDict[@"FW"] containsString:@"FOG_HAOZE_AIR"]) {
+//            productID = [NSMutableString stringWithFormat:@"%@", @"580c2783"];
+//        }
         
         [self pairSuccessedV1WithConfigDic:mataDataDict];
         

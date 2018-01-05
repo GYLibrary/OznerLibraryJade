@@ -37,7 +37,7 @@ typedef enum : NSUInteger {
 
 @property (weak,nonatomic) id<OznerPairDelegate> delegate;
 
-- (instancetype)sharedInstance;
++ (instancetype)sharedInstance;
 
 
 /**
